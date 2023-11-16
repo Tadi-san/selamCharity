@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],
+input[type="email"],
+ input[type="password"],
+ input[type="number"],
+
+ input[type= 'tel'],
+ select,
+  textarea{
+/* width: 100%;
+border: none;
+border-bottom: 1px solid blue;
+outline: none;
+margin: 0.25rem 0;
+padding: 0.5rem; */
+    @apply w-full border-2 border-sky-300 
+
+}
+select{
+  width: fit-content;
+}
+
+textarea{
+  height: 110px;
+}
+input[type= "search"]{
+  width: 180px;
+  height: 35px;
+  border-width: 1px;
+  border: 1px solid black;
+}
+
+input:focus{
+  outline: none;
+}
