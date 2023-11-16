@@ -26,14 +26,14 @@ app.use(cors({
 const { MongoClient } = require("mongodb");
 const adminName = 'abel'
 const adminPassword = 'admin1234'
-// mongoose.connect(process.env.DATABASE_URL)
-main().catch(err => console.log(err));
+mongoose.connect(process.env.DATABASE_URL)
+// main().catch(err => console.log(err));
 
-async function main() {
-    // await mongoose.connect("mongodb://localhost:27017/Form", {useNewUrlParser:true});
+// async function main() {
+//     // await mongoose.connect("mongodb://localhost:27017/Form", {useNewUrlParser:true});
   
-    await mongoose.connect('mongodb://127.0.0.1:27017/Form');
-  }
+//     await mongoose.connect('mongodb://127.0.0.1:27017/Form');
+//   }
 
 app.post("/register", async(req,res) => {
     const {name, address, phone, work, lang} = req.body
