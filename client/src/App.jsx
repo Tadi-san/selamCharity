@@ -13,7 +13,7 @@ import LoginPage from "./LoginPage"
 import EditPage from "../search/edit"
 
 export default function App() {
-  axios.defaults.baseURL = "https://selam-charity-for-better-future.vercel.app/"
+  axios.defaults.baseURL = "https://selam-charity-for-better-future.vercel.app"
  axios.defaults.withCredentials = true
   
   return (
