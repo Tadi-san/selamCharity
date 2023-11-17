@@ -21,7 +21,9 @@ app.use('/uploads', express.static(__dirname + "/uploads"))
 app.use(express.json())
 app.use(cors({
     credentials: true,
-    origin: "https://selam-charity-for-better-client.vercel.app"
+    origin: "https://selam-charity-for-better-client.vercel.app",
+     methods: ['GET','POST']
+    
 }))
 const { MongoClient } = require("mongodb");
 const adminName = 'abel'
