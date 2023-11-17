@@ -22,7 +22,7 @@ app.use(express.json())
 const cors=require("cors");
 const corsOptions ={
 Origin : "https://selam-charity-for-better-client.vercel.app",
-Credentials: false,
+Credentials: true,
 Methods: [GET, POST, OPTIONS],
 }
 
