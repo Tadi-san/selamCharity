@@ -21,9 +21,9 @@ app.use('/uploads', express.static(__dirname + "/uploads"))
 app.use(express.json())
 const cors=require("cors");
 const corsOptions ={
-Access-Control-Allow-Origin : "https://selam-charity-for-better-client.vercel.app",
-Access-Control-Allow-Credentials : true,
-Access-Control-Allow-Methods : [GET, POST, OPTIONS],
+Origin : "https://selam-charity-for-better-client.vercel.app",
+Credentials: false,
+Methods: [GET, POST, OPTIONS],
 }
 
 app.use(cors(corsOptions))
