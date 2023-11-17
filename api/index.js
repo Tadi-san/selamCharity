@@ -22,7 +22,8 @@ app.use(express.json())
 app.use(cors({
     credentials: true,
     origin: "https://selam-charity-for-better-client.vercel.app",
-     methods: ['GET','POST']
+     methods: ['GET','POST'],
+     headers: headers
     
 }))
 const { MongoClient } = require("mongodb");
