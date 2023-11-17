@@ -1,5 +1,5 @@
 const  express = require('express')
-const cors = require('cors')
+// const cors = require('cors')
 const app = express()
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
@@ -19,10 +19,14 @@ app.use(express.json({limit:'25mb'}))
 app.use(express.urlencoded({extended: true, limit:'25mb'}))
 app.use('/uploads', express.static(__dirname + "/uploads"))
 app.use(express.json())
-app.use(cors({
-    credentials: true,
-    origin: "https://selam-charity-for-better-future.vercel.app/"
-}))
+const cors=require("cors");
+const corsOptions ={
+Access-Control-Allow-Origin : "https://selam-charity-for-better-client.vercel.app",
+Access-Control-Allow-Credentials : true,
+Access-Control-Allow-Methods : [GET, POST, OPTIONS],
+}
+
+app.use(cors(corsOptions))
 const { MongoClient } = require("mongodb");
 const adminName = 'abel'
 const adminPassword = 'admin1234'
